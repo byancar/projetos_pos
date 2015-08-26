@@ -29,5 +29,8 @@ namespace Acmecurso.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Estudante> Estudante { get; set; }
+        //public object Estudante { get; internal set; }
     }
 }

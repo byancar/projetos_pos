@@ -6,6 +6,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Acmecurso.Models
 {
+
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
@@ -30,7 +31,14 @@ namespace Acmecurso.Models
             return new ApplicationDbContext();
         }
 
+
+
+
         public DbSet<Estudante> Estudante { get; set; }
+        public DbSet<Curso> Cursos { get; set; }
+        public DbSet<Inscricao> Inscricao { get; set; }
+
+        public System.Data.Entity.DbSet<Acmecurso.Models.Professor> Professors { get; set; }
         //public object Estudante { get; internal set; }
     }
 }

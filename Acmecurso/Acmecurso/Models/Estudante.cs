@@ -26,5 +26,7 @@ namespace Acmecurso.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}",ApplyFormatInEditMode = true)]
         [Required]
         public DateTime DataMatricula { get; set; }
+
+        public virtual ICollection<Inscricao> Inscricoes { get; set; }
     }
 }

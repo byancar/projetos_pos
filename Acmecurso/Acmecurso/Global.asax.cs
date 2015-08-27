@@ -12,6 +12,7 @@ namespace Acmecurso
     {
         protected void Application_Start()
         {
+            System.Data.Entity.Database.SetInitializer<Models.ApplicationDbContext>(null);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
